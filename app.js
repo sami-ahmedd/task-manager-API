@@ -11,4 +11,5 @@ app.get('/hello', (req,res) => {
 
 app.use('/api/v1/tasks',tasks)
 
-app.listen(5000, () => console.log('listening on port 5000'))
+const port = 3000;
+app.listen(port, () => console.log('listening on port 3000'))

@@ -4,12 +4,11 @@ const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 require('dotenv').config()
 
+app.use(express.static('./public'))
 app.use(express.json())
 
 
-app.get('/hello', (req,res) => {
-    res.send("hello")
-})
+
 
 app.use('/api/v1/tasks',tasks)
 
